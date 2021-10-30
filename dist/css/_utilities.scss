@@ -3,3 +3,30 @@ $dark-med-color: #1f4287;
 $light-med-color: #278ea5;
 $light-color: #21e6c1;
 $white: #fff;
+$website-width: 1920px;
+$section-width: 1378px;
+
+.container{
+  max-width: $website-width;
+  margin: auto;
+  overflow: hidden;
+}
+
+.button-lm{
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 107.5%;
+  width: 150px;
+  height: 40px;
+  background: $light-med-color;
+  color: $white;
+}
+
+.right-align{
+  text-align: right;
+}

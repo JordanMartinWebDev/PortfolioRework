@@ -1,14 +1,16 @@
 @import '_utilities.scss';
+@import '_itemgrid.scss';
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: none;
-  max-width: 1920px;
 }
 
 body{
   font-family: 'Poppins', sans-serif;
+  background: $light-med-color;
+  overflow-x: hidden;
 }
 
 ul{
@@ -23,34 +25,248 @@ a{
   text-decoration: none;
 }
 
+h2{
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 90px;
+  letter-spacing: 0.05em;
+  color: $white;
+}
+
 .nav-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 66%;
   background: $light-med-color;
   border-radius: 0 0 50px 0;
-  filter: drop-shadow(0 10px 10px #000000);
+  box-shadow: 0 10px 10px rgba($color: #000000, $alpha: .25);
 
   .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 21%;
+    padding-left: 20.75%;
 
     svg{
-      padding: 31px 0px;
+      margin: 31px 0px;
     }
 
     ul{
      display: flex;
+     margin-right: 40px;
     }
     ul li{
       font-family: 'Roboto', sans-serif;
       color: $dark-color;
-      padding: 0px 32px;
+      margin: 0px 15px;
       font-size: 23px;
-      
+
       a{
         color: $dark-color;
       }
     }
+  }
+}
+
+#showcase{
+  border-bottom: 104px solid $light-med-color;
+  
+  .container{
+    margin-top: 104px;
+    .bg-l{
+      position: relative;
+      z-index: -1;
+      -webkit-filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, .7));
+    }
+
+    .dot-grid{
+      position: absolute;
+      top: 414px;
+      left: 0;
+      z-index: -1;
+    }
+
+    .heading-container{
+      position: absolute;
+      width: 690px;
+      height: 327px;
+      left: 13.75%;
+      top: 32%;
+      h1{
+        overflow: wrap;
+        font-weight: 900;
+        font-size: 90px;
+        line-height: 107.5%;
+        letter-spacing: 0.014em;
+        color: $white;
+      }
+      h4{
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 107.5%;
+        letter-spacing: 0.03em;
+        color: $light-color;
+        padding-bottom: 30px;
+      }
+      p{
+        width: 473px;
+        height: 78px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 107.5%;
+        letter-spacing: 0.035em;
+        color: $light-med-color;
+        margin-bottom: 27px;
+      }
+      svg{
+        margin-top: 149px;
+      }
+    }
+  }
+}
+
+#my-work{
+  position: relative;
+  background: $dark-color;
+  width: 100%;
+  height: 180vh;
+  border-bottom: 5px solid $light-color;
+
+  .container{
+    max-width: 1378px;
+    .heading{
+      margin-top: 207px;
+      margin-bottom: 88px;
+      left: 13.75%;
+      top: 207px;
+
+      &::after{
+        content: '';
+        position: absolute;
+        width: 922px;
+        height: 9px;
+        background-color: $light-color;
+      }
+    }
+    
+    h2{
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 90px;
+      letter-spacing: 0.05em;
+      color: $white;
+    }
+
+    .item-main{
+      background: $light-color;
+      overflow: hidden;
+      width: 100%;
+      height: 421px;
+      margin-bottom: 82px;
+      border-radius: 30px;
+    }
+    .text{
+      &-title{
+        display: flex;
+        justify-content: center;
+      }
+      &-des{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+      }
+      
+    }
+
+    .grid-right{
+      position: absolute;
+      top: 80vh;
+      left: 95vw;
+    }
+
+    .arrow{
+      margin-top: 108px;
+    }
+  }
+}
+
+#skills{
+  position: relative;
+  background: $dark-color;
+  height: 100vh;
+  .container{
+    padding-top: 88px;
+    max-width: $section-width;
+  }
+  .grid-right{
+    position: absolute;
+    top: 50vh;
+    left: 95vw;
+  }
+
+  .skill{
+    &-container{
+      position: relative;
+      background: linear-gradient(267.88deg, $dark-med-color 4.6%, $light-med-color 90.9%);
+      max-width: $section-width;
+      height: 270px;
+      border-radius: 70px;
+    }
+
+    &-items{
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 47px;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 100px;
+    }
+
+    &-item{
+      position: relative;
+      color: $dark-color;
+
+      i{
+        font-size: 9em;
+      }
+
+      h4{
+        text-align: center;
+        color: $light-color;
+        margin-top: 30px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .test-box{
+    background: linear-gradient(267.88deg, $dark-med-color 4.6%, $light-med-color 90.9%);
+    border-radius: 70px;
+    width: $section-width;
+    height: 270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+
+  .arrow{
+    margin: 20px;
+    &-left{
+
+    }
+    &-right{
+      transform: scaleX(-1);
+    }
+  }
+
+  // .test-arrow{
+  //   position: absolute;
+  //   top: 80vh;
+  // }
   }
 }

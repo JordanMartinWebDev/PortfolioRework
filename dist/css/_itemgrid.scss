@@ -1,0 +1,15 @@
+.items{
+  display: grid;
+  gap: 38px 164px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+
+  .item{
+    position: relative;
+    background: $light-color;
+    overflow: hidden;
+    width: 350px;
+    height: 283px;
+    border-radius: 30px;
+  }
+}
