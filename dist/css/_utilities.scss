@@ -13,11 +13,7 @@ $section-width: 1378px;
 }
 
 .button-lm{
-  position: absolute;
-  display: flex;
   text-align: center;
-  justify-content: center;
-  align-items: center;
   font-weight: 500;
   font-size: 18px;
   line-height: 107.5%;
@@ -35,12 +31,14 @@ $section-width: 1378px;
 
 .grid-left{
   position: absolute;
+  z-index: -1;
   top: 42vh;
   left: 0vw;
 }
 
 .grid-right{
   position: absolute;
-  top: 50vh;
+  z-index: -1;
+  top: 80vh;
   left: 95vw;
 }
