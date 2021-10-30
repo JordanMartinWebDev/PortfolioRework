@@ -28,5 +28,19 @@ $section-width: 1378px;
 }
 
 .right-align{
-  text-align: right;
+  display: flex;
+  justify-content: end;
+  max-width: $section-width;
+}
+
+.grid-left{
+  position: absolute;
+  top: 42vh;
+  left: 0vw;
+}
+
+.grid-right{
+  position: absolute;
+  top: 50vh;
+  left: 95vw;
 }
