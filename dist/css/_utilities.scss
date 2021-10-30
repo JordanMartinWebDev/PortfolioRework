@@ -13,11 +13,7 @@ $section-width: 1378px;
 }
 
 .button-lm{
-  position: absolute;
-  display: flex;
   text-align: center;
-  justify-content: center;
-  align-items: center;
   font-weight: 500;
   font-size: 18px;
   line-height: 107.5%;
@@ -35,12 +31,45 @@ $section-width: 1378px;
 
 .grid-left{
   position: absolute;
+  z-index: -1;
   top: 42vh;
   left: 0vw;
 }
 
 .grid-right{
   position: absolute;
-  top: 50vh;
+  z-index: -1;
+  top: 80vh;
   left: 95vw;
+}
+
+.c {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 100px;
+  left: 100px;
+  z-index: -1;
+
+  &:nth-child(2n){
+    background-color: $dark-color;
+    opacity: 0;
+    animation: fade 3s linear;
+  }
+  &:nth-child(2n+1){
+    border-radius: 50%;
+    background-color: $light-color;
+    opacity: 0;
+    animation: fade 3s linear;
+  }
+  &:nth-child(3n+1){
+    background-color: $dark-med-color;
+    opacity: 0;
+    animation: fade 2s linear;
+  }
+
+  @keyframes fade {
+    0%,100% { opacity: 0; }
+    50% { opacity: .6; }
+  }
 }
