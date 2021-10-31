@@ -6,6 +6,9 @@
   padding: 0;
   box-sizing: none;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body{
   font-family: 'Poppins', sans-serif;
@@ -112,7 +115,7 @@ h2{
       max-width: $section-width;
       width: 690px;
       height: 327px;
-      top: 32vh;
+      top: 34vh;
       left: 14vw;
 
       h1{
@@ -151,7 +154,7 @@ h2{
       }
 
       svg{
-        margin-top: 150px;
+        margin-top: 130px;
       }
     }
   }

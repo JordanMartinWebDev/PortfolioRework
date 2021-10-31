@@ -1,9 +1,11 @@
+
 const header_container = document.getElementById('showcase');
 
 var winWidth = window.innerWidth;
 var winHeight = window.innerHeight;
 
 document.addEventListener('DOMContentLoaded', makeSquare);
+document.addEventListener('DOMContentLoaded', scrollTop);
 
 function makeSquare() {
   header_container.insertAdjacentHTML("afterbegin",
@@ -58,4 +60,8 @@ function getRandomNumber(min, max) {
 
   return Math.random() * (max - min) + min;
 
+}
+
+function scrollTop() {
+  document.documentElement.scrollTop = 0;
 }

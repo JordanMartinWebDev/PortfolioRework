@@ -113,6 +113,10 @@
           box-sizing: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #278ea5;
@@ -227,7 +231,7 @@ h2 {
   max-width: 1378px;
   width: 690px;
   height: 327px;
-  top: 32vh;
+  top: 34vh;
   left: 14vw;
 }
 
@@ -275,7 +279,7 @@ h2 {
 }
 
 #showcase .container .heading-container svg {
-  margin-top: 150px;
+  margin-top: 130px;
 }
 
 #my-work {
