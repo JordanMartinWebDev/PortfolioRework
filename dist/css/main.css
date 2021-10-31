@@ -185,6 +185,27 @@ h2 {
 
 .nav-bar .container ul li a {
   color: #071e3d;
+  position: relative;
+}
+
+.nav-bar .container ul li a.current::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  bottom: -12px;
+  right: calc(50% - 6px);
+  background-color: #21e6c1;
+}
+
+.nav-bar .container ul li a:hover::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  bottom: -12px;
+  right: calc(50% - 6px);
+  background-color: #071e3d;
 }
 
 #showcase {
