@@ -50,16 +50,15 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20.75%;
-    max-width: $section-width;
+    width: 69%;
 
     svg{
-      margin: 31px 0px;
+      max-width: 170px;
+      margin: 26px 0px;
     }
 
     ul{
      display: flex;
-     margin-right: 40px;
     }
     ul li{
       font-family: 'Roboto', sans-serif;
@@ -99,32 +98,39 @@ h2{
 }
 
 #showcase{
-  border-bottom: 104px solid $light-med-color;
+  width: 80%;
+  margin: 0 auto;
+  
+  
+  .bg-l{
+    position: absolute;
+    margin-top: 104px;
+    left: 0;
+    z-index: -2;
+    -webkit-filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, .7));
+  }
   
   .container{
-    margin-top: 104px;
-
-    .bg-l{
-      position: relative;
-      z-index: -2;
-      -webkit-filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, .7));
-    }
+    padding-top: 30vh;
+    margin-bottom: 170px;
+    overflow: visible;
+      
 
     .heading-container{
-      position: absolute;
-      max-width: $section-width;
-      width: 690px;
-      height: 327px;
-      top: 34vh;
-      left: 14vw;
+      max-width: 690px;
+      animation: 1.3s ease-out 0s 1 slideInFromLeft;
+      
 
       h1{
-        overflow: wrap;
         font-weight: 900;
         font-size: 90px;
         line-height: 107.5%;
         letter-spacing: 0.014em;
         color: $white;
+        transition: 500ms;
+        &:hover{
+          transform: scale(105%);
+        }
       }
 
       h4{
@@ -135,9 +141,14 @@ h2{
         color: $light-color;
         padding-top: 5px;
         padding-bottom: 35px;
+        transition: 500ms;
+        &:hover{
+          transform: scale(105%);
+        }
       }
+
       p{
-        width: 470px;
+        max-width: 470px;
         height: 80px;
         font-weight: 500;
         font-size: 22px;
@@ -145,16 +156,21 @@ h2{
         letter-spacing: 0.035em;
         color: $light-med-color;
         margin-bottom: 27px;
-      }
-      .button{
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        transition: 500ms;
+        &:hover{
+          transform: scale(105%);
+        }
       }
 
       svg{
         margin-top: 130px;
+        opacity: 0;
+        animation: fadeIn 1.3s forwards;
+        animation-delay: 1.3s;
+        transition: 500ms;
+        &:hover{
+          transform: scale(105%);
+        }
       }
     }
   }
@@ -163,13 +179,13 @@ h2{
 #my-work{
   background-color: $dark-color;
   width: 100%;
-  height: 180vh;
   border-bottom: 5px solid $light-color;
   position: relative;
 
     &::after{
       content: '';
       position: absolute;
+      // z-index: 1;
       width: 1200px;
       height: 1200px;
       transform: rotate(20deg);
@@ -181,6 +197,7 @@ h2{
     &::before{
       content: '';
       position: absolute;
+      // z-index: 1;
       width: 548px;
       height: 655px;
       background-color: $light-med-color;
@@ -189,27 +206,27 @@ h2{
     }
 
   .container{
-    max-width: 1378px;
-    position: absolute;
-    z-index: 1;
-    left: 14vw;
+    max-width: 80%;
+    position: relative;
+    z-index: 100;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    padding-top: 207px;
+
     .heading{
-      margin-top: 207px;
       margin-bottom: 88px;
-      left: 13.75%;
-      top: 207px;
 
       &::after{
         content: '';
         position: absolute;
-        width: 922px;
+        width: 60%;
         height: 9px;
         background-color: $light-color;
       }
     }
     
     h2{
-      font-weight: bold;
+      font-weight: 600;
       font-size: 60px;
       line-height: 90px;
       letter-spacing: 0.05em;
@@ -245,101 +262,100 @@ h2{
 }
 
 #skills{
-  background: $dark-color;
-  z-index: -2;
-  height: 100vh;
+  background-color: $dark-color;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
 
   h2{
-    font-weight: 900;
+    font-weight: 600;
     font-size: 60px;
   }
 
   .container{
-    position: absolute;
-    max-width: $section-width;
-    left: 14vw;
-  }
-  .skills-heading{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    max-width: 80%;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
 
-      h2{
-        padding-left: 15px;
-      }  
-    }
-
-  .test-heading{
-    margin-top: 50px;
-    margin-bottom: 30px;
-    h2{
-      line-height: 4.5rem;
-    }
-  }
-
-  .grid-right{
-    position: absolute;
-    top: 50vh;
-    left: 95vw;
-  }
-
-  .skill{
-    &-container{
-      position: relative;
-      background: linear-gradient(267.88deg, $dark-med-color 4.6%, $light-med-color 90.9%);
-      max-width: $section-width;
-      height: 270px;
-      border-radius: 70px;
-    }
-
-    &-items{
-      position: absolute;
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 47px;
-      justify-content: center;
+    .skills-heading{
+      display: flex;
       align-items: center;
-      padding: 40px 100px;
-    }
-
-    &-item{
-      position: relative;
-      color: $dark-color;
-
-      i{
-        font-size: 9em;
+      justify-content: right;
+      margin-top: 50px;
+      margin-bottom: 20px;
+  
+        h2{
+          padding-left: 15px;
+        }  
       }
 
-      h4{
-        text-align: center;
-        color: $light-color;
-        margin-top: 30px;
-        font-size: 20px;
+      .test-heading{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        h2{
+          line-height: 4.5rem;
+        }
       }
-    }
-  }
-
-  .test-box{
-    background: linear-gradient(267.88deg, $dark-med-color 4.6%, $light-med-color 90.9%);
-    border-radius: 70px;
-    width: $section-width;
-    height: 270px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     
-
-    .arrow{
-      margin: 20px;
-      &-left{
-
+      .skill{
+        &-container{
+          background: linear-gradient(267.88deg, $dark-med-color 4.6%, $light-med-color 90.9%);
+          max-width: 100%;
+          height: 270px;
+          border-radius: 70px;
+        }
+    
+        &-items{
+          position: absolute;
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 47px;
+          justify-content: center;
+          align-items: center;
+          padding: 40px 100px;
+        }
+    
+        &-item{
+          position: relative;
+          color: $dark-color;
+    
+          i{
+            font-size: 9em;
+          }
+    
+          h4{
+            text-align: center;
+            color: $light-color;
+            margin-top: 30px;
+            font-size: 20px;
+          }
+        }
       }
-      &-right{
-        transform: scaleX(-1);
+    
+      .test-box{
+        background: linear-gradient(267.88deg, $dark-med-color 4.6%, $light-med-color 90.9%);
+        border-radius: 70px;
+        max-width: 100%;
+        height: 270px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    
+        .arrow{
+          margin: 20px;
+          &-left{
+    
+          }
+          &-right{
+            transform: scaleX(-1);
+          }
+        }
       }
-    }
   }
+
+  
 }
