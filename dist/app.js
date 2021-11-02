@@ -7,61 +7,48 @@ var winHeight = window.innerHeight;
 document.addEventListener('DOMContentLoaded', makeSquare);
 document.addEventListener('DOMContentLoaded', scrollTop);
 
-function makeSquare() {
-  header_container.insertAdjacentHTML("afterbegin",
-    `
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  <div class="c"></div>
-  `
-  )
-  const squares = document.getElementsByClassName('c');
-
-  for (var i = 0; i < squares.length; i++) {
-
-    // shortcut! the current div in the list
-    var Square = squares[i];
-
-    // get random numbers for each element
-    randomTop = getRandomNumber(0, winHeight);
-    randomLeft = getRandomNumber(0, winWidth);
-
-    // update top and left position
-    Square.style.top = randomTop + "px";
-    Square.style.left = randomLeft + "px";
-
-  }
-
-  setTimeout(() => {
-    removeSquare();
-  }, 3000);
-
-
-}
-
-function removeSquare() {
-  header_container.querySelectorAll('.c').forEach(function (a) { a.remove() });
-
-  makeSquare();
-}
-
-function getRandomNumber(min, max) {
-
-  return Math.random() * (max - min) + min;
-
-}
-
 function scrollTop() {
   document.documentElement.scrollTop = 0;
 }
+
+const images = document.querySelectorAll('.anim');
+const wipeAni = document.querySelectorAll('.wipe-ani');
+
+observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > .0025) {
+      entry.target.style.animation = `flyin 500ms ${entry.target.dataset.delay} forwards ease-out`;
+    } else {
+      entry.target.style.animation = 'none';
+    }
+  })
+})
+
+wipeAniObserver = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.childNodes.forEach(child => {
+        if (child.nodeType !== 3) {
+          child.classList.add('anim2')
+        }
+      })
+    } else {
+      entry.target.childNodes.forEach(child => {
+        if (child.nodeType !== 3) {
+          child.classList.remove('anim2')
+        }
+      })
+    }
+  })
+})
+
+images.forEach(image => {
+  observer.observe(image);
+})
+
+wipeAni.forEach(image => {
+  wipeAniObserver.observe(image);
+})
+

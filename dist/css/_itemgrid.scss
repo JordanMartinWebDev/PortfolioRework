@@ -8,8 +8,9 @@
     position: relative;
     background: $dark-med-color;
     overflow: hidden;
-    max-width: 350px;
+    width: 350px;
     height: 283px;
     border-radius: 30px;
+    opacity: 0;
   }
 }
