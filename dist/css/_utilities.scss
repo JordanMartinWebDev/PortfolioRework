@@ -34,11 +34,14 @@ $section-width: 1378px;
   z-index: -1;
   top: 42vh;
   left: 0vw;
+  opacity: 0;
+  animation: wipe 1s forwards;
+  animation-delay: 1.5s;
 }
 
 .grid-right{
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 80vh;
   left: 95vw;
 }
@@ -67,9 +70,57 @@ $section-width: 1378px;
     opacity: 0;
     animation: fade 2s linear;
   }
+}
 
-  @keyframes fade {
-    0%,100% { opacity: 0; }
-    50% { opacity: .6; }
+.anim2{
+  animation: wipe 1s forwards;
+  animation-delay: 500ms;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0; }
+  50% { opacity: .5; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes wipe {
+	0% {
+    opacity: 1;
+		transform: scale(0, .0989);
+	}
+	50% {
+    opacity: 1;
+		transform: scale(1, .0989);
+	}
+  100% { opacity: 1; }
+}
+
+@keyframes flyin {
+  0%{
+    transform: scale(0px , 0px);
+    opacity: 0;
+  }
+  70%{
+    transform: scale(110%, 110%);
+    opacity: .80;
+  }
+  100%{
+    transform: scale(100%, 100%);
+    opacity: 1;
   }
 }

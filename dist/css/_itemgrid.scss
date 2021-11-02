@@ -1,7 +1,7 @@
 .items{
   display: grid;
-  gap: 38px 164px;
   grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20px;
   justify-items: center;
 
   .item{
@@ -11,5 +11,6 @@
     width: 350px;
     height: 283px;
     border-radius: 30px;
+    opacity: 0;
   }
 }
