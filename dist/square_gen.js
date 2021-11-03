@@ -25,8 +25,8 @@ function makeSquare() {
     var Square = squares[i];
 
     // get random numbers for each element
-    randomTop = getRandomNumber(0, winHeight);
-    randomLeft = getRandomNumber(0, winWidth);
+    randomTop = getRandomNumber(0, winHeight - 50);
+    randomLeft = getRandomNumber(0, winWidth - 50);
 
     // update top and left position
     Square.style.top = randomTop + "px";
