@@ -871,4 +871,76 @@ h2 {
     padding: 10px 0px;
   }
 }
+
+.light {
+  background-color: #21e6c1;
+}
+
+.light .nav-bar {
+  background: #21e6c1;
+}
+
+.light .nav-bar .container ul li a.current::after {
+  background-color: #1f4287;
+}
+
+.light .nav-bar .container ul li a:hover::after {
+  background-color: #071e3d;
+}
+
+.light #showcase .bg-l path {
+  fill: #fff;
+}
+
+.light #showcase .container .heading-container h1 {
+  color: #071e3d;
+}
+
+.light #showcase .container .heading-container h4 {
+  color: #278ea5;
+}
+
+.light #showcase .container .heading-container p {
+  color: #071e3d;
+}
+
+.light #my-work {
+  background-color: #fff;
+}
+
+.light #my-work .container::after {
+  background-color: #1f4287;
+}
+
+.light #my-work .container::before {
+  background-color: #21e6c1;
+}
+
+.light #my-work .container .heading::after {
+  background-color: #21e6c1;
+}
+
+.light #my-work .container h2 {
+  color: #071e3d;
+}
+
+.light #my-work .container .item-main {
+  background: #278ea5;
+}
+
+.light #my-work .container .items .item {
+  background: #278ea5;
+}
+
+.light #my-work .container .arrow rect {
+  fill: #071e3d;
+}
+
+.light #my-work .container .arrow g rect {
+  fill: #1f4287;
+}
+
+.light #footer::before {
+  background-color: #278ea5;
+}
 /*# sourceMappingURL=main.css.map */
