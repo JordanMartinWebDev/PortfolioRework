@@ -10,7 +10,14 @@
     overflow: hidden;
     max-width: 350px;
     height: 283px;
-    border-radius: 30px;
+    border: 5px solid $white;
     opacity: 0;
+    img{
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      transform: scale(90%);
+
+    }
   }
 }
