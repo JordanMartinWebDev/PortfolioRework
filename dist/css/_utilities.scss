@@ -22,6 +22,26 @@ $website-width: 1920px;
   color: $white;
 }
 
+.ld-toggle{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  }
+
+
+
+.t-light{
+  background-image: url("/dist/images/lightmode.svg");
+  width: 30px;
+  height: 30px;
+}
+
+.t-dark{
+  background-image: url("/dist/images/darkmode.svg");
+  width: 30px;
+  height: 30px;
+}
+
 .right-align{
   display: flex;
   justify-content: end;
