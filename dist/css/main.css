@@ -19,6 +19,7 @@
   position: absolute;
   right: 15px;
   top: 15px;
+  z-index: 10000;
 }
 
 .t-light {
@@ -808,16 +809,55 @@ h2 {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 810px) {
   svg {
     -webkit-transform: scale(70%);
             transform: scale(70%);
   }
-  .nav-bar ul {
-    display: none;
+  .nav-bar {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: 50px;
   }
-  .nav-bar ul li {
-    display: none;
+  .nav-bar .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+  .nav-bar .container ul {
+    background: #21e6c1;
+    position: fixed;
+    width: 95%;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+  }
+  .nav-bar .container ul li a.current::after {
+    background-color: #1f4287;
+  }
+  .nav-bar .container ul li a.current:hover::after {
+    background-color: #071e3d;
   }
   #showcase {
     display: -webkit-box;
@@ -832,8 +872,23 @@ h2 {
     text-align: center;
   }
   #showcase .container {
-    padding-top: 15vh;
+    padding-top: 5vh;
     margin-bottom: 0px;
+  }
+  #showcase .container .heading-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #showcase .container .heading-container svg {
     opacity: 1;
@@ -841,6 +896,12 @@ h2 {
             animation: none;
     scale: 80%;
     margin-top: 80px;
+  }
+  #showcase .container .heading-container h1 {
+    color: #fff !important;
+  }
+  #showcase .container .heading-container p {
+    color: #278ea5 !important;
   }
   #my-work .container {
     padding-top: 100px;
@@ -887,6 +948,7 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 10px 0px;
+    margin-bottom: 60px;
   }
 }
 
