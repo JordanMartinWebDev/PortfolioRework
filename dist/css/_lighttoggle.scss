@@ -1,0 +1,100 @@
+//CSS changes for light theme
+
+.light{
+  background-color: $light-color;
+
+.nav-bar{
+  background: $light-color;
+  .container{
+    ul li{
+      a{
+        &.current{
+          &::after{
+            background-color: $dark-med-color;
+          }
+        }
+        &:hover{
+           &::after{
+            background-color: $dark-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+#showcase{
+  .bg-l{
+    path{
+      fill: $white;
+    }
+  }  
+  .container{
+    .heading-container{
+      
+      h1{
+        color: $dark-color;
+      }
+
+      h4{
+        color: $light-med-color;
+      }
+
+      p{
+        color: $dark-color;
+      }
+    }
+  }
+}
+
+#my-work{
+  background-color: $white;
+
+  .container{
+
+    &::after{
+      background-color: $dark-med-color;
+    }
+  
+    &::before{
+      background-color: $light-color;
+    }
+
+    .heading{
+      &::after{
+        background-color: $light-color;
+      }
+    }   
+    h2{
+      color: $dark-color;
+    }
+
+    .item-main{
+      background: $light-med-color;
+    }   
+
+    .items{
+      .item{
+        background: $light-med-color;
+      }
+    }
+    .arrow{
+      rect{
+        fill: $dark-color;
+      }
+      g{
+        rect{
+          fill: $dark-med-color;
+        }
+      }
+    }
+  }
+}
+
+#footer{
+
+  &::before{
+    background-color: $light-med-color;
+  }
+  }
+}
